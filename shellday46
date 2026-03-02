@@ -46,3 +46,61 @@ free
 echo "disk used in the machine"
 df -h
 echo "the above information from the machine"  
+
+
+by AI monit script 
+
+#!/bin/bash
+
+# ==============================
+#  Author  : Himanshu
+#  Purpose : System Information Script
+# ==============================
+
+# Color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+echo -e "${CYAN}==============================================${NC}"
+echo -e "${GREEN}   SYSTEM INFORMATION SCRIPT (GCP MACHINE)   ${NC}"
+echo -e "${CYAN}==============================================${NC}"
+
+echo -e "${YELLOW}📌 Script Author:${NC} Himanshu"
+echo ""
+
+# Hostname
+echo -e "${BLUE}🔹 HOSTNAME DETAILS${NC}"
+echo -e "${CYAN}----------------------------------------------${NC}"
+hostname
+echo ""
+
+# IP Address
+echo -e "${BLUE}🔹 IP ADDRESS DETAILS${NC}"
+echo -e "${CYAN}----------------------------------------------${NC}"
+hostname -i
+echo ""
+
+# Running Processes
+echo -e "${BLUE}🔹 RUNNING PROCESSES${NC}"
+echo -e "${CYAN}----------------------------------------------${NC}"
+ps
+echo ""
+
+# Memory Usage
+echo -e "${BLUE}🔹 MEMORY USAGE${NC}"
+echo -e "${CYAN}----------------------------------------------${NC}"
+free -h
+echo ""
+
+# Disk Usage
+echo -e "${BLUE}🔹 DISK USAGE${NC}"
+echo -e "${CYAN}----------------------------------------------${NC}"
+df -h
+echo ""
+
+echo -e "${GREEN}✅ System information collected successfully.${NC}"
+echo -e "${CYAN}==============================================${NC}"
